@@ -1,0 +1,194 @@
+body{
+    background: url(sekiller/WhatsApp\ Image\ 2025-07-05\ at\ 20.16.06.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header{
+    background-color: #090040da;
+    height: 70px;
+    padding: 0px;
+    margin: 0px;
+}
+
+header img{
+    display: inline-block;
+    margin-bottom:-10px ;
+    width: 30px;
+    height: 40px;
+    padding: 0px;
+    margin-right: 0px;
+    margin-top: -17px;
+    left: 20px;
+    position: absolute;
+}
+
+.orta3{
+    display: inline-block;
+    height: 20px;
+    width: 30%;
+    transition-duration: 1s;
+}
+header{
+    transition-timing-function: ease;
+    transition: transform 1s;
+}
+header:hover .f1{
+    transform: translateX(620%);
+}
+.salamlar{
+    width: 364px;
+    margin: auto;
+}
+.a1{
+    margin-bottom:0px;
+    width: 256px;
+    color: white;
+    float: left;
+    transition: filter 0.3s;
+    transition-timing-function: ease;
+    display: inline-block;
+    margin: auto;
+}
+.orta{
+    width: 66%;
+    margin: auto;
+    transition-delay: 1s;
+    transition: filter 0.3s;
+    display: inline-block;
+    margin-top: 17px;
+    transform: translateX(-10%);
+}
+
+
+header:hover .orta{
+    filter: drop-shadow(1px 2px 3px white);
+}
+nav{
+    background-color: #2d4353da;
+    height: 50px;
+}
+.dropdown{
+    display: inline-block;
+    margin-top: 15px;
+    float: left;
+}
+a{
+    transition: filter 0.4s, text-decoration 1s;
+    text-decoration: none;
+}
+.dropdown a:link{
+    color: white;
+}
+.innernav{
+    width: 40%;
+    float: right;
+}
+.dropdownn1{
+    width: 16%;
+    margin-left: 3%;
+    margin-right: 2%;
+}
+.dropdownn2{
+    width: 16%;
+    margin-left: 3%;
+    margin-right: 2%;
+}
+.dropdownn3{
+    width: 16%;
+    margin-left: 6%;
+}
+.dropdownn4{
+    width: 13%;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.dropdownn5{
+    width: 16%;
+    margin-right: 1%;
+}
+a:hover{
+    filter: drop-shadow(1px 1px 1px white);
+    text-decoration: underline;
+}
+.ff1{
+    color: white;
+    width: 480px;
+    height: 30px;
+    align-items: center;
+}
+.ff2{
+    float: right;
+    width: 80%;
+    margin-right: 80px;
+}
+.inner{
+    display: flex;
+}
+.typewriter{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aa2{
+    width: 40%;
+}
+main{
+    margin-top: 30px;
+}
+.typewriter{
+    display: flex;
+    /* justify-content: center; */
+}
+.typewriter h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4.5rem;
+    height: 90px;
+    /* margin-inline: auto; */
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
+}
+.typewriter h1:hover{
+    filter: drop-shadow(2px 2px 5px white);
+}
+.osman1{
+    animation-name: osmanbey;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+.osman2{
+    display: block;
+}
+.loading-border{
+    color: white;
+    display: block;
+    height: 20px;
+    font-size: 25px;
+}
+@keyframes osmanbey{
+    0%{
+        
+    }
+    100%{
+        filter: drop-shadow(2px 2px 5px white);
+    }
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}

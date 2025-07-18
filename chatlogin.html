@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google ilə Daxil Ol</title>
+</head>
+<body style="text-align:center; margin-top: 50px; font-family: Arial;">
+
+  <!-- Öz dizaynlı Google login düyməsi -->
+  <div class="google">
+    <button id="google-btn" style="
+      padding: 10px 20px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;">
+      <img src="https://developers.google.com/identity/images/g-logo.png" width="20" />
+      Continue with Google
+    </button>
+  </div>
+
+  <!-- JavaScript yönləndirmə -->
+  <script>
+    document.getElementById("google-btn").addEventListener("click", function () {
+      const clientId = "1087231531013-hsfgl5731kan1nc9h6n98g03d14j0ih5.apps.googleusercontent.com";  // Bura öz Client ID-ni yaz
+      const redirectUri = "http://127.0.0.1:5500/websaytlar/qebul.html";
+      const scope = "https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email";
+      const responseType = "token";
+
+      const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}&scope=${scope}`;
+
+      window.location.href = authUrl;
+    });
+  </script>
+
+</body>
+</html>

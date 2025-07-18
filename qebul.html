@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect - Google Login</title>
+</head>
+<body style="text-align:center; margin-top: 50px; font-family: Arial;">
+
+  <h1>Google ilə daxil oldun!</h1>
+  <div id="info">Yüklənir...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.hash.substring(1));
+    const accessToken = params.get("access_token");
+
+    if (accessToken) {
+      fetch("https://www.googleapis.com/oauth2/v2/userinfo", {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("info").innerHTML = `
+          <p><strong>Ad:</strong> ${data.name}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <img src="${data.picture}" alt="User Picture" width="100" style="border-radius: 50px;">
+        `;
+      });
+    } else {
+      document.getElementById("info").innerHTML = `<p style="color:red;">Token tapılmadı. Login alınmadı.</p>`;
+    }
+  </script>
+
+</body>
+</html>
